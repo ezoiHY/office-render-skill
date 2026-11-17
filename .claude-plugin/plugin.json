@@ -1,0 +1,12 @@
+{
+  "name": "office-render",
+  "version": "0.1.0",
+  "description": "Render PowerPoint decks to PDF and PNG on macOS without repeated \"Grant File Access\" prompts: every project gets one render folder that PowerPoint is granted once.",
+  "author": {
+    "name": "Harry",
+    "url": "https://github.com/ezoiHY"
+  },
+  "homepage": "https://github.com/ezoiHY/office-render-skill",
+  "repository": "https://github.com/ezoiHY/office-render-skill",
+  "keywords": ["powerpoint", "pptx", "macos", "render", "pdf", "sandbox", "applescript"]
+}

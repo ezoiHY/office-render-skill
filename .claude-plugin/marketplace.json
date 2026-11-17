@@ -1,0 +1,14 @@
+{
+  "name": "office-render",
+  "owner": {
+    "name": "Harry",
+    "url": "https://github.com/ezoiHY"
+  },
+  "plugins": [
+    {
+      "name": "office-render",
+      "source": "./",
+      "description": "Render .pptx to PDF/PNG through PowerPoint on macOS via one once-granted render folder per project."
+    }
+  ]
+}

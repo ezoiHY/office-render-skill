@@ -1,0 +1,21 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # 3.9 is the python3 that ships with macOS; the script must keep running on it.
+        python: ["3.9", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m py_compile skills/office-render/scripts/office_render.py
+      # Everything that needs no PowerPoint: project detection, the render folder, cleanup, the CLI.
+      - run: python -m unittest discover -s tests -v
