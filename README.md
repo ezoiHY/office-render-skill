@@ -98,7 +98,9 @@ folder itself (it is hidden: press ⌘⇧. to show it, or select the project fol
 | 5 | PowerPoint couldn't open or export the file |
 
 Other scripts can import it and call `export_pdf(deck, pdf, project=...)`, which raises `Stop` with the
-exit code as `.code`.
+exit code as `.code`. A skill can bundle a copy of the script this way, as
+[pairs-group-meeting-skill](https://github.com/ezoiHY/pairs-group-meeting-skill) does for its renderer.
+Everything that follows the convention shares one `.office-render` folder, and one grant, per project.
 
 ## 中文说明
 

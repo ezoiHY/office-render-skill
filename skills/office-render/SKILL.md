@@ -76,8 +76,10 @@ PowerPoint throws away the user's own open decks. Ask the user instead.
 ## Other renderers and Office apps
 
 - A renderer from another skill that opens decks in PowerPoint where they sit will keep prompting for
-  every new folder. pairs-group-meeting's `render.py` does this today. For the PowerPoint step,
-  prefer this script, or move that renderer to the same convention.
+  every new folder. For the PowerPoint step, prefer this script, or move that renderer to the same
+  convention: bundle a copy of `office_render.py` and call `export_pdf()`, the way
+  pairs-group-meeting's `render.py` does. Renderers that follow it share one `.office-render` folder,
+  and so one grant, per project.
 - Word and Excel are sandboxed the same way. If you have to script them, open and save inside the same
   `.office-render` folder. Each app needs its own one-time grant.
 - `--render-dir DIR` uses exactly that folder instead, for example one folder shared by several
